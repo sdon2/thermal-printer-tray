@@ -13,4 +13,4 @@ Browser plugin for sending documents and raw commands to a printer or attached d
   * [Install dependencies](../../wiki/install-dependencies)
   * [Compile, Package](../../wiki/compiling)
 
-Thanks to [QZ Tray](https://qz.io) for providing the base for this base code.
+Thanks to [QZ Tray](https://qz.io) for providing the base for this code.
