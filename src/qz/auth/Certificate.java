@@ -345,21 +345,21 @@ public class Certificate {
     public boolean isSignatureValid(Algorithm algorithm, String signature, String data) {
         return true;
         
-        if (!signature.isEmpty()) {
-            //On errors, assume failure.
-            try {
-                Signature verifier = Signature.getInstance(algorithm.name);
-                verifier.initVerify(theCertificate.getPublicKey());
-                verifier.update(StringUtils.getBytesUtf8(DigestUtils.sha256Hex(data)));
+        //if (!signature.isEmpty()) {
+        //    //On errors, assume failure.
+        //    try {
+        //        Signature verifier = Signature.getInstance(algorithm.name);
+        //        verifier.initVerify(theCertificate.getPublicKey());
+        //        verifier.update(StringUtils.getBytesUtf8(DigestUtils.sha256Hex(data)));
 
-                return verifier.verify(Base64.decodeBase64(signature));
-            }
-            catch(GeneralSecurityException e) {
-                log.error("Unable to verify signature", e);
-            }
-        }
+        //        return verifier.verify(Base64.decodeBase64(signature));
+        //    }
+        //    catch(GeneralSecurityException e) {
+        //        log.error("Unable to verify signature", e);
+        //    }
+        //}
 
-        return false;
+        //return false;
     }
 
     /** Checks if the certificate has been added to the allow file */

@@ -252,5 +252,4 @@
     <target name="dmg" depends="get-target-arch,target-os-mac,distribute,download-jre,build-dmg"/>
     <target name="makeself" depends="get-target-arch,target-os-linux,distribute,download-jre,build-run"/>
 
-
 </project>
